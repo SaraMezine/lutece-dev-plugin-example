@@ -1,7 +1,10 @@
 <#include "manageproject_tabs.html" />
 <@tabs tab="project" />
 
-<@rowBoxHeader i18nTitleKey="example.create_project.title">
+
+<@rowBox>
+    <@boxHeader i18nTitleKey="example.create_project.title"></@boxHeader>
+    <@boxBody>
     <form class="form-horizontal" method="post" name="create_project" action="jsp/admin/plugins/example/ManageProjects.jsp">
         <@messages errors=errors />
         <input type="hidden" id="id" name="id"/>
@@ -9,7 +12,9 @@
         <@fieldInputText i18nLabelKey="example.create_project.labelName" inputName="name" mandatory=true value="${project.name!''}" i18nHelpBlockKey="example.create_project.labelName.help" />
         <@fieldInputText i18nLabelKey="example.create_project.labelDescription" inputName="description" mandatory=true value="${project.description!''}" i18nHelpBlockKey="example.create_project.labelDescription.help" />
         <@fieldInputText i18nLabelKey="example.create_project.labelImageUrl" inputName="image_url" mandatory=true value="${project.imageUrl!''}" i18nHelpBlockKey="example.create_project.labelImageUrl.help" />
+        <@fieldInputText i18nLabelKey="example.create_project.labelCost" inputName="cost" mandatory=true value="${project.cost!''}" i18nHelpBlockKey="example.create_project.labelCost.help" />
         <@actionButtons button1Name="action_createProject" button2Name="view_manageProjects"/>
     </form>
-</@rowBoxHeader>
+    </@boxBody>
+</@rowBox>
 
