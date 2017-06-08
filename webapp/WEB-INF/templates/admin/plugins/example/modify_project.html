@@ -11,6 +11,10 @@
             <@fieldInputText i18nLabelKey="example.modify_project.labelCost" inputName="cost" mandatory=true value="${project.cost}" i18nHelpBlockKey="example.modify_project.labelCost.help" />
             <@actionButtons button1Name="action_modifyProject" button2Name="view_manageProjects"/>
         </form>
+    
+        <div class="form-group text-center">
+        ${extendableResourceActionsHtml!} 
+        </div>
     </@boxBody>
 </@rowBox>
 
